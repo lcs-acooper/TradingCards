@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var names = ["Scott", "Mark", "Chris", "Sean", "Rod", "Meng", "Natasha","Chase", "Evans", "Paul", "Durtschi", "Max", "Fart"]
+    @State private var names = ["Example#1", "Example#2", "Example#3", "Example#4", "Example#5"]
     
     var body: some View {
         ScrollView {
             ForEach(names, id: \.self) { name in
                 NavigationView(content: {
                     NavigationLink(
-                        destination: Person()
+                        destination: CardInfo()
                     ) {
                         HStack {
                             Text(name)
